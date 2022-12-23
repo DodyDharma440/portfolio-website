@@ -1,8 +1,10 @@
 import React, { useCallback, useState } from "react";
 import { HiOutlineMoon, HiOutlineSun } from "react-icons/hi";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const { pathname } = useLocation();
+
   const [currentTheme, setCurrentTheme] = useState(
     localStorage.theme ||
       window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -29,9 +31,9 @@ const Navbar = () => {
             <h3 className="font-bold">Dodi Aditya</h3>
           </Link>
           <div className="flex items-center">
-            <Link to="/projects">
+            <Link to={pathname === "/projects" ? "/" : "/projects"}>
               <p className="text-gray-700 text-sm dark:hover:text-white dark:text-gray-300 cursor-pointer">
-                Projects
+                {pathname === "/projects" ? "Home" : "Projects"}
               </p>
             </Link>
             <p className="mx-2 dark:text-gray-400">|</p>
