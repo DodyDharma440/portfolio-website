@@ -102,9 +102,9 @@ const projects: IProject[] = [
       "React Query",
       "React Table",
       "EthersJS",
-      "Web3Modal",
+      "Wagmi",
     ],
-    duration: "Oct 2022 - Now",
+    duration: "Oct 2022 - Apr 2023",
   },
   {
     title: "Cookbook App (Practice Project)",
@@ -118,7 +118,7 @@ const projects: IProject[] = [
     description:
       "Simple blog API containing articles, comments, and user management",
     stacks: ["Golang", "Gin", "Gorm", "Swaggo", "PostgreSQL"],
-    duration: "Jul 2021",
+    duration: "Jul 2022",
   },
   {
     title: "Movies Review App (Practice Project)",

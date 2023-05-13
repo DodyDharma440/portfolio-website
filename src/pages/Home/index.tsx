@@ -9,6 +9,7 @@ import {
   FaNodeJs,
   FaNpm,
   FaReact,
+  FaSwift,
   FaTwitter,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -20,7 +21,7 @@ import {
   SiStorybook,
 } from "react-icons/si";
 import { DiCss3 } from "react-icons/di";
-import { GrGolang } from "react-icons/gr";
+import { TbBrandGolang } from "react-icons/tb";
 import {
   HiCode,
   HiOutlineAcademicCap,
@@ -45,11 +46,19 @@ const skills = [
   { label: "CSS", icon: DiCss3 },
   { label: "ReactJS", icon: FaReact },
   { label: "NextJS", icon: SiNextdotjs },
+  { label: "NodeJS", icon: FaNodeJs },
+  { label: "NPM", icon: FaNpm },
+];
+
+export const moderateSkills = [
   { label: "Figma", icon: FaFigma },
   { label: "Express", icon: SiExpress },
-  { label: "NodeJS", icon: FaNodeJs },
   { label: "Storybook", icon: SiStorybook },
-  { label: "NPM", icon: FaNpm },
+];
+
+export const learnedSkills = [
+  { label: "Golang", icon: TbBrandGolang },
+  { label: "Swift", icon: FaSwift },
 ];
 
 const experience = [
@@ -134,13 +143,14 @@ const Home = () => {
         <hr className="my-4 dark:border-gray-700 border-4 w-[80%]" />
         <p className="leading-8 dark:text-gray-300">
           Hello, my name is I Made Dodi Aditya Ari Dharma or you can call me
-          Dodi. I was born on May 12, 2003, and now I'm still 19 years old.
-          Currently I work as a frontend developer and also a student majoring
-          in informatics engineering. I am interested in exploring knowledge in
-          the field of technology, especially in the field of web development. I
-          have an honest personality, able to work in a team, and also always
-          respect others. My hobbies are coding, playing games, and playing
-          Balinese traditional music.
+          Dodi. I was born on May 12, 2003, and now I'm still{" "}
+          {new Date().getFullYear() - 2003} years old. Currently I work as a
+          frontend developer and also a student majoring in informatics
+          engineering. I am interested in exploring knowledge in the field of
+          technology, especially in the field of web development. I have an
+          honest personality, able to work in a team, and also always respect
+          others. My hobbies are coding, playing games, and playing Balinese
+          traditional music.
         </p>
       </section>
       <section className="mt-12">
@@ -148,10 +158,8 @@ const Home = () => {
           # My Skills
         </h1>
         <hr className="my-4 dark:border-gray-700 border-4 w-[80%]" />
-        <p className="leading-8 dark:text-gray-300 mb-4">
-          This is my skill or tech stack that i use for work.
-        </p>
-        <div className="grid grid-cols-12 gap-6">
+        <p className="leading-8 dark:text-gray-300 mb-4">Strong Skills : </p>
+        <div className="grid grid-cols-12 gap-6 pl-6">
           {skills.map(({ icon: Icon, label }, index) => {
             return (
               <div
@@ -164,6 +172,38 @@ const Home = () => {
             );
           })}
         </div>
+        <hr className="h-[1px] bg-gray-200 ml-6 my-4 dark:bg-gray-700 border-0" />
+        <p className="leading-8 dark:text-gray-300 mb-4">Moderate Skills : </p>
+        <div className="grid grid-cols-12 gap-6 pl-6">
+          {moderateSkills.map(({ icon: Icon, label }, index) => {
+            return (
+              <div
+                className="flex items-center col-span-6 md:col-span-4 text-gray-600 dark:text-gray-300"
+                key={index}
+              >
+                <Icon />
+                <span className="ml-2">{label}</span>
+              </div>
+            );
+          })}
+        </div>
+        <hr className="h-[1px] bg-gray-200 ml-6 my-4 dark:bg-gray-700 border-0" />
+
+        <p className="leading-8 dark:text-gray-300 mb-4">Still Learning : </p>
+        <div className="grid grid-cols-12 gap-6 pl-6">
+          {learnedSkills.map(({ icon: Icon, label }, index) => {
+            return (
+              <div
+                className="flex items-center col-span-6 md:col-span-4 text-gray-600 dark:text-gray-300"
+                key={index}
+              >
+                <Icon />
+                <span className="ml-2">{label}</span>
+              </div>
+            );
+          })}
+        </div>
+        <hr className="h-[1px] bg-gray-200 ml-6 my-4 dark:bg-gray-700 border-0" />
       </section>
       <section className="mt-12">
         <h1 className="text-3xl my-3 font-semibold text-blue-900 dark:text-blue-400">

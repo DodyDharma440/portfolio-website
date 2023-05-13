@@ -13,7 +13,9 @@ const PageLayout: React.FC = () => {
       </div>
       <hr className="container mx-auto max-w-md dark:border-gray-700" />
       <div className="text-center py-6 text-gray-600 dark:text-gray-400">
-        <p className="text-xs mb-[2px]">&copy; Copyright 2022</p>
+        <p className="text-xs mb-[2px]">
+          &copy; Copyright {new Date().getFullYear()}
+        </p>
         <p className="text-xs flex items-center justify-center">
           <span className="mr-1">
             <HiOutlineCode />

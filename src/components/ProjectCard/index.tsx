@@ -7,7 +7,7 @@ type ProjectCardProps = {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className="border p-4 border-gray-200 dark:border-gray-600 rounded-md transition-transform hover:-translate-y-1 duration-200 hover:shadow">
+    <div className="border p-4 border-gray-200 dark:border-gray-600 rounded-md duration-200 hover:shadow">
       <h2 className="text-lg font-semibold mb-1">{project.title}</h2>
       <p className="text-xs font-semibold text-blue-900 dark:text-blue-400 mb-1">
         {project.duration}
