@@ -3,4 +3,5 @@ export interface IProject {
   description: string;
   stacks: string[];
   duration: string;
+  image?: string;
 }

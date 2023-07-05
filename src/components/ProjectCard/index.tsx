@@ -8,6 +8,17 @@ type ProjectCardProps = {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <div className="border p-4 border-gray-200 dark:border-gray-600 rounded-md duration-200 hover:shadow">
+      <div className="bg-gray-100 overflow-hidden dark:bg-gray-700 rounded-md h-[315px] mb-4 relative flex items-center justify-center">
+        {project.image ? (
+          <img src={project.image} className="object-contain" loading="lazy" />
+        ) : (
+          <p className="text-xs text-gray-500 dark:text-gray-400">
+            Image is not availabe. Maybe this is a backend project or private
+            project.
+          </p>
+        )}
+      </div>
+
       <h2 className="text-lg font-semibold mb-1">{project.title}</h2>
       <p className="text-xs font-semibold text-blue-900 dark:text-blue-400 mb-1">
         {project.duration}
@@ -17,7 +28,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       </p>
       <hr className="dark:border-gray-600 my-2" />
       <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">
-        Tech stacks that I use :{" "}
+        Tech stacks:{" "}
       </p>
       <div className="flex flex-wrap">
         {project.stacks.map((stack, index) => {

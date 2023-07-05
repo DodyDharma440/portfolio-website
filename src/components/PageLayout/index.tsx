@@ -8,7 +8,7 @@ const PageLayout: React.FC = () => {
   return (
     <main className="font-inter">
       <Navbar />
-      <div className="container max-w-2xl mx-auto py-20 px-4">
+      <div className="container max-w-2xl mx-auto pt-4 pb-20 px-4">
         <Outlet />
       </div>
       <hr className="container mx-auto max-w-md dark:border-gray-700" />

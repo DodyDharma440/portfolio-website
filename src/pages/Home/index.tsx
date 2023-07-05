@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  FaAngular,
   FaFacebook,
   FaFigma,
   FaGithub,
@@ -54,31 +55,27 @@ export const moderateSkills = [
   { label: "Figma", icon: FaFigma },
   { label: "Express", icon: SiExpress },
   { label: "Storybook", icon: SiStorybook },
+  { label: "React Native", icon: FaReact },
 ];
 
 export const learnedSkills = [
   { label: "Golang", icon: TbBrandGolang },
   { label: "Swift", icon: FaSwift },
+  { label: "Angular", icon: FaAngular },
 ];
 
 const experience = [
   {
-    title: "Frontend Developer at Dimedika",
-    duration: "Oct 2021 - Present",
-    description:
-      "At Dimedika, I developed a web-based application to do a Covid-19 test",
-  },
-  {
     title: "Frontend Developer at PT. Ganeshcom Mitra Solusi Digital",
     duration: "Aug 2021 - Present",
-    description:
-      "Contributed to several projects, my role as a frontend developer is to maintain the UI of an application by adjusting to wireframe and UI/UX design",
+    description: `Contributing to several projects such as university systems, finance, oil & gas calculations, clinic systems, and landing pages as a Frontend Developer
+using React, NextJS, Javascript and Typescript as framework and programming language.`,
   },
 ];
 
 const educations = [
   {
-    title: "STMIK Primakara",
+    title: "Primakara University",
     duration: "Sep 2022 - Present",
     description:
       "I am currently a fresh student or still in early semester. Here I majored in informatics engineering to develop skills in the IT field",
@@ -118,11 +115,21 @@ const Home = () => {
                 );
               })}
             </div>
-            <Link to="/projects">
-              <button className="my-6 border border-gray-200 dark:border-gray-700 rounded px-4 py-2 relative hover:bg-gray-300 dark:hover:bg-gray-800 hover:bg-opacity-30">
-                See Projects
-              </button>
-            </Link>
+            <div className="flex gap-2">
+              <Link to="/projects">
+                <button className="my-6 text-white bg-gray-600 dark:bg-gray-800 rounded px-4 py-2 relative hover:bg-gray-700 dark:hover:bg-gray-700">
+                  Projects
+                </button>
+              </Link>
+              <a
+                href="cv.pdf"
+                download="Frontend Developer - I Made Dodi Aditya Ari Dharma.pdf"
+              >
+                <button className="my-6 border border-gray-200 dark:border-gray-700 rounded px-4 py-2 relative hover:bg-gray-300 dark:hover:bg-gray-800 hover:bg-opacity-30">
+                  Download CV
+                </button>
+              </a>
+            </div>
           </div>
           <div className="col-span-2 md:col-span-1">
             <div className="rounded-full border-4 border-blue-900 dark:border-blue-400 w-[250px] my-4 ml-auto mr-auto md:mr-0 md:my-0 md:ml-auto h-[250px] bg-black">
