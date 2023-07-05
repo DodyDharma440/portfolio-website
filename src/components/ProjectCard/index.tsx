@@ -8,14 +8,16 @@ type ProjectCardProps = {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <div className="border p-4 border-gray-200 dark:border-gray-600 rounded-md duration-200 hover:shadow">
-      <div className="bg-gray-100 overflow-hidden dark:bg-gray-700 rounded-md h-[315px] mb-4 relative flex items-center justify-center">
+      <div className="bg-gray-100 overflow-hidden dark:bg-gray-700 rounded-md max-h-[315px] mb-4 relative flex items-center justify-center">
         {project.image ? (
           <img src={project.image} className="object-contain" loading="lazy" />
         ) : (
-          <p className="text-xs text-gray-500 dark:text-gray-400">
-            Image is not availabe. Maybe this is a backend project or private
-            project.
-          </p>
+          <div className="text-xs p-4 text-gray-500 dark:text-gray-400 text-center h-[150px] flex items-center justify-center">
+            <p>
+              Image is not availabe. Maybe this is a backend project or private
+              project.
+            </p>
+          </div>
         )}
       </div>
 
