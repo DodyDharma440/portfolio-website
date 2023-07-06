@@ -8,7 +8,7 @@ type ProjectCardProps = {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <div className="border p-4 border-gray-200 dark:border-gray-600 rounded-md duration-200 hover:shadow">
-      <div className="bg-gray-100 overflow-hidden dark:bg-gray-700 rounded-md max-h-[315px] mb-4 relative flex items-center justify-center">
+      <div className="bg-gray-100 overflow-hidden dark:bg-gray-700 rounded-md max-h-[320px] mb-4 relative flex items-center justify-center">
         {project.image ? (
           <img src={project.image} className="object-contain" loading="lazy" />
         ) : (
