@@ -128,6 +128,14 @@ const projects: IProject[] = [
     image: "/mil.png",
   },
   {
+    title: "Recipe Website (Practice Project)",
+    description:
+      "Website for search recipe using TheMealDB API. Made to fulfill the final assignment in Primakara Developers",
+    stacks: ["TypeScript", "React", "NextJS", "Chakra UI", "Tailwind CSS"],
+    duration: "Dec 2022",
+    image: "/recipe.png",
+  },
+  {
     title: "Terminal Portfolio Website (Practice Project)",
     description:
       "Portfolio website with UI like zsh terminal on Mac with powerlevel10k theme.",
